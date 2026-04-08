@@ -272,69 +272,71 @@
 			<i class="fas fa-chevron-up"></i>
 		</button>
 
-		<!-- More Works Dropdown -->
-		<div class="more-works-container">
-			<button
-				class="more-works-btn"
-				onclick="toggleMoreWorks()"
-				title="View More Works from Our Lab"
-			>
-				<i class="fas fa-flask"></i>
-				More Works
-				<i class="fas fa-chevron-down dropdown-arrow"></i>
-			</button>
-			<div class="more-works-dropdown" id="moreWorksDropdown">
-				<div class="dropdown-header">
-					<h4>More Works from Our Lab</h4>
-					<button class="close-btn" onclick="toggleMoreWorks()">
-						<i class="fas fa-times"></i>
-					</button>
-				</div>
-				<div class="works-list">
-					<!-- TODO: Replace with your lab's related works -->
-					<a
-						href="https://arxiv.org/abs/PAPER_ID_1"
-						class="work-item"
-						target="_blank"
-					>
-						<div class="work-info">
-							<!-- TODO: Replace with actual paper title -->
-							<h5>Paper Title 1</h5>
-							<!-- TODO: Replace with brief description -->
-							<p>Brief description of the work and its main contribution.</p>
-							<!-- TODO: Replace with venue and year -->
-							<span class="work-venue">Conference/Journal 2024</span>
-						</div>
-						<i class="fas fa-external-link-alt"></i>
-					</a>
-					<!-- TODO: Add more related works or remove extra items -->
-					<a
-						href="https://arxiv.org/abs/PAPER_ID_2"
-						class="work-item"
-						target="_blank"
-					>
-						<div class="work-info">
-							<h5>Paper Title 2</h5>
-							<p>Brief description of the work and its main contribution.</p>
-							<span class="work-venue">Conference/Journal 2023</span>
-						</div>
-						<i class="fas fa-external-link-alt"></i>
-					</a>
-					<a
-						href="https://arxiv.org/abs/PAPER_ID_3"
-						class="work-item"
-						target="_blank"
-					>
-						<div class="work-info">
-							<h5>Paper Title 3</h5>
-							<p>Brief description of the work and its main contribution.</p>
-							<span class="work-venue">Conference/Journal 2023</span>
-						</div>
-						<i class="fas fa-external-link-alt"></i>
-					</a>
+		<template>
+			<!-- More Works Dropdown -->
+			<div class="more-works-container">
+				<button
+					class="more-works-btn"
+					onclick="toggleMoreWorks()"
+					title="View More Works from Our Lab"
+				>
+					<i class="fas fa-flask"></i>
+					More Works
+					<i class="fas fa-chevron-down dropdown-arrow"></i>
+				</button>
+				<div class="more-works-dropdown" id="moreWorksDropdown">
+					<div class="dropdown-header">
+						<h4>More Works from Our Lab</h4>
+						<button class="close-btn" onclick="toggleMoreWorks()">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+					<div class="works-list">
+						<!-- TODO: Replace with your lab's related works -->
+						<a
+							href="https://arxiv.org/abs/PAPER_ID_1"
+							class="work-item"
+							target="_blank"
+						>
+							<div class="work-info">
+								<!-- TODO: Replace with actual paper title -->
+								<h5>Paper Title 1</h5>
+								<!-- TODO: Replace with brief description -->
+								<p>Brief description of the work and its main contribution.</p>
+								<!-- TODO: Replace with venue and year -->
+								<span class="work-venue">Conference/Journal 2024</span>
+							</div>
+							<i class="fas fa-external-link-alt"></i>
+						</a>
+						<!-- TODO: Add more related works or remove extra items -->
+						<a
+							href="https://arxiv.org/abs/PAPER_ID_2"
+							class="work-item"
+							target="_blank"
+						>
+							<div class="work-info">
+								<h5>Paper Title 2</h5>
+								<p>Brief description of the work and its main contribution.</p>
+								<span class="work-venue">Conference/Journal 2023</span>
+							</div>
+							<i class="fas fa-external-link-alt"></i>
+						</a>
+						<a
+							href="https://arxiv.org/abs/PAPER_ID_3"
+							class="work-item"
+							target="_blank"
+						>
+							<div class="work-info">
+								<h5>Paper Title 3</h5>
+								<p>Brief description of the work and its main contribution.</p>
+								<span class="work-venue">Conference/Journal 2023</span>
+							</div>
+							<i class="fas fa-external-link-alt"></i>
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
+		</template>
 
 		<main id="main-content">
 			<section class="hero">
@@ -344,39 +346,35 @@
 							<div class="column has-text-centered">
 								<!-- TODO: Replace with your paper title -->
 								<h1 class="title is-1 publication-title">
-									Academic Project Page
+									UniMotion: Motion Editing and Retargeting via Conditional Flow
 								</h1>
 								<div class="is-size-5 publication-authors">
 									<!-- TODO: Replace with your paper authors and their personal links -->
+									<span class="author-block"> Junlin Li,</span>
+									<span class="author-block"> Xinhao Song,</span>
 									<span class="author-block">
-										<a href="FIRST AUTHOR PERSONAL LINK" target="_blank"
-											>First Author</a
-										><sup>*</sup>,</span
-									>
-									<span class="author-block">
-										<a href="SECOND AUTHOR PERSONAL LINK" target="_blank"
-											>Second Author</a
-										><sup>*</sup>,</span
-									>
-									<span class="author-block">
-										<a href="THIRD AUTHOR PERSONAL LINK" target="_blank"
-											>Third Author</a
-										>
+										<a href="https://cs.nyu.edu/~sw4429/" target="_blank"
+											>Siqi Wang</a
+										>,
 									</span>
+									<span class="author-block"> Haibin Huang,</span>
+									<span class="author-block"> Yili Zhao</span>
 								</div>
 
-								<div class="is-size-5 publication-authors">
-									<!-- TODO: Replace with your institution and conference/journal info -->
-									<span class="author-block"
-										>Institution Name<br />Conference name and year</span
-									>
-									<!-- TODO: Remove this line if no equal contribution -->
-									<span class="eql-cntrb"
-										><small
-											><br /><sup>*</sup>Indicates Equal Contribution</small
-										></span
-									>
-								</div>
+								<template>
+									<div class="is-size-5 publication-authors">
+										<!-- TODO: Replace with your institution and conference/journal info -->
+										<span class="author-block"
+											>Institution Name<br />Conference name and year</span
+										>
+										<!-- TODO: Remove this line if no equal contribution -->
+										<span class="eql-cntrb"
+											><small
+												><br /><sup>*</sup>Indicates Equal Contribution</small
+											></span
+										>
+									</div>
+								</template>
 
 								<div class="column has-text-centered">
 									<div class="publication-links">
@@ -443,30 +441,23 @@
 				</div>
 			</section>
 
-			<!-- Teaser video-->
+			<!-- Teaser Image -->
 			<section class="hero teaser">
 				<div class="container is-max-desktop">
 					<div class="hero-body">
 						<!-- TODO: Replace with your teaser video -->
-						<video
-							poster=""
-							id="tree"
-							autoplay
-							controls
-							muted
-							loop
-							height="100%"
-							preload="metadata"
-						>
-							<!-- TODO: Add your video file path here -->
-							<source src="static/videos/banner_video.mp4" type="video/mp4" />
-						</video>
+						<img
+							src="static/images/teaser_no_noise.png"
+							alt="Third research result visualization"
+							loading="lazy"
+						/>
 						<!-- TODO: Replace with your video description -->
 						<h2 class="subtitle has-text-centered">
-							Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut
-							lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas
-							dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut
-							maximus.
+							UniMotion unifies motion generation, editing, and retargeting. A
+							single rectified-flow model conditioned on text and skeleton
+							enables (left) generation, (middle) zero-shot editing by changing
+							only the text condition, and (right) zero-shot retargeting by
+							changing only the skeleton condition.
 						</h2>
 					</div>
 				</div>
