@@ -392,19 +392,21 @@
 											</a>
 										</span>
 
-										<!-- TODO: Add your supplementary material PDF or remove this section -->
-										<span class="link-block">
-											<a
-												href="static/pdfs/supplementary_material.pdf"
-												target="_blank"
-												class="external-link button is-normal is-rounded is-dark"
-											>
-												<span class="icon">
-													<i class="fas fa-file-pdf"></i>
-												</span>
-												<span>Supplementary</span>
-											</a>
-										</span>
+										<template>
+											<!-- TODO: Add your supplementary material PDF or remove this section -->
+											<span class="link-block">
+												<a
+													href="static/pdfs/supplementary_material.pdf"
+													target="_blank"
+													class="external-link button is-normal is-rounded is-dark"
+												>
+													<span class="icon">
+														<i class="fas fa-file-pdf"></i>
+													</span>
+													<span>Supplementary</span>
+												</a>
+											</span>
+										</template>
 
 										<!-- TODO: Replace with your GitHub repository URL -->
 										<span class="link-block">
@@ -462,7 +464,7 @@
 					</div>
 				</div>
 			</section>
-			<!-- End teaser video -->
+			<!-- End teaser Image -->
 
 			<!-- Paper abstract -->
 			<section class="section hero is-light">
@@ -473,15 +475,29 @@
 							<div class="content has-text-justified">
 								<!-- TODO: Replace with your paper abstract -->
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-									ullamcorper tellus sed ante aliquam tempus. Etiam porttitor
-									urna feugiat nibh elementum, et tempor dolor mattis. Donec
-									accumsan enim augue, a vulputate nisi sodales sit amet. Proin
-									bibendum ex eget mauris cursus euismod nec et nibh. Maecenas
-									ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat
-									ac purus eget, sagittis vestibulum metus. Sed vestibulum
-									bibendum lectus gravida commodo. Pellentesque auctor leo vitae
-									sagittis suscipit.
+									Text-driven motion editing and skeletal retargeting are
+									traditionally handled by fragmented pipelines with
+									incompatible inputs and representations: editing relies on
+									specialized generative steering, while retargeting is deferred
+									to geometric post-processing. We present a unifying
+									perspective where both tasks are cast as instances of
+									<b>conditional transport</b> within a single generative
+									framework. By leveraging recent advances in flow matching, we
+									demonstrate that editing and retargeting are fundamentally the
+									same generative task, distinguished only by which conditioning
+									signal—semantic or structural—is modulated during inference.
+									We implement this vision via a rectified-flow motion model
+									jointly conditioned on text prompts and target skeletal
+									structures. Our architecture extends a DiT-style transformer
+									with per-joint tokenization and explicit joint self-attention
+									to strictly enforce kinematic dependencies, while a
+									multi-condition classifier-free guidance strategy balances
+									text adherence with skeletal conformity. Experiments on
+									SnapMoGen and a multi-character Mixamo subset show that a
+									single trained model supports text-to-motion generation,
+									zero-shot editing, and zero-shot retargeting. This unified
+									approach simplifies deployment and improves structural
+									consistency compared to task-specific baselines.
 								</p>
 							</div>
 						</div>
@@ -494,6 +510,7 @@
 			<section class="hero is-small">
 				<div class="hero-body">
 					<div class="container">
+						<h2 class="title">Figures</h2>
 						<div id="results-carousel" class="carousel results-carousel">
 							<div class="item">
 								<!-- TODO: Replace with your research result images -->
@@ -551,17 +568,33 @@
 				<div class="hero-body">
 					<div class="container">
 						<!-- Paper video. -->
-						<h2 class="title is-3">Video Presentation</h2>
+						<!-- <h2 class="title is-3">Video Presentation</h2> -->
+						<h2 class="title">Video Presentation</h2>
 						<div class="columns is-centered has-text-centered">
 							<div class="column is-four-fifths">
 								<div class="publication-video">
 									<!-- TODO: Replace with your YouTube video ID -->
-									<iframe
-										src="https://www.youtube.com/embed/JkaxUblCGz0"
-										frameborder="0"
-										allow="autoplay; encrypted-media"
-										allowfullscreen
-									></iframe>
+									<!-- <iframe -->
+									<!-- 	src="https://www.youtube.com/embed/JkaxUblCGz0" -->
+									<!-- 	frameborder="0" -->
+									<!-- 	allow="autoplay; encrypted-media" -->
+									<!-- 	allowfullscreen -->
+									<!-- ></iframe> -->
+									<video
+										poster=""
+										id="video1"
+										controls
+										muted
+										loop
+										height="100%"
+										preload="metadata"
+									>
+										<!-- Your video file here -->
+										<source
+											src="static/videos/video.mp4"
+											type="video/mp4"
+										/>
+									</video>
 								</div>
 							</div>
 						</div>
@@ -570,62 +603,73 @@
 			</section>
 			<!-- End youtube video -->
 
-			<!-- Video carousel -->
-			<section class="hero is-small">
-				<div class="hero-body">
-					<div class="container">
-						<h2 class="title is-3">Another Carousel</h2>
-						<div id="results-carousel" class="carousel results-carousel">
-							<div class="item item-video1">
-								<!-- TODO: Add poster image for better preview -->
-								<video
-									poster=""
-									id="video1"
-									controls
-									muted
-									loop
-									height="100%"
-									preload="metadata"
-								>
-									<!-- Your video file here -->
-									<source src="static/videos/carousel1.mp4" type="video/mp4" />
-								</video>
-							</div>
-							<div class="item item-video2">
-								<!-- TODO: Add poster image for better preview -->
-								<video
-									poster=""
-									id="video2"
-									controls
-									muted
-									loop
-									height="100%"
-									preload="metadata"
-								>
-									<!-- Your video file here -->
-									<source src="static/videos/carousel2.mp4" type="video/mp4" />
-								</video>
-							</div>
-							<div class="item item-video3">
-								<!-- TODO: Add poster image for better preview -->
-								<video
-									poster=""
-									id="video3"
-									controls
-									muted
-									loop
-									height="100%"
-									preload="metadata"
-								>
-									<!-- Your video file here -->
-									<source src="static/videos/carousel3.mp4" type="video/mp4" />
-								</video>
+			<template>
+				<!-- Video carousel -->
+				<section class="hero is-small">
+					<div class="hero-body">
+						<div class="container">
+							<h2 class="title is-3">Another Carousel</h2>
+							<div id="results-carousel" class="carousel results-carousel">
+								<div class="item item-video1">
+									<!-- TODO: Add poster image for better preview -->
+									<video
+										poster=""
+										id="video1"
+										controls
+										muted
+										loop
+										height="100%"
+										preload="metadata"
+									>
+										<!-- Your video file here -->
+										<source
+											src="static/videos/carousel1.mp4"
+											type="video/mp4"
+										/>
+									</video>
+								</div>
+								<div class="item item-video2">
+									<!-- TODO: Add poster image for better preview -->
+									<video
+										poster=""
+										id="video2"
+										controls
+										muted
+										loop
+										height="100%"
+										preload="metadata"
+									>
+										<!-- Your video file here -->
+										<source
+											src="static/videos/carousel2.mp4"
+											type="video/mp4"
+										/>
+									</video>
+								</div>
+								<div class="item item-video3">
+									<!-- TODO: Add poster image for better preview -->
+									<video
+										poster=""
+										id="video3"
+										controls
+										muted
+										loop
+										height="100%"
+										preload="metadata"
+									>
+										<!-- Your video file here -->
+										<source
+											src="static/videos/carousel3.mp4"
+											type="video/mp4"
+										/>
+									</video>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<!-- End video carousel -->
+				</section>
+				<!-- End video carousel -->
+			</template>
 
 			<!-- Paper poster -->
 			<section class="hero is-small is-light">
@@ -634,7 +678,7 @@
 						<h2 class="title">Poster</h2>
 
 						<!-- TODO: Replace with your poster PDF -->
-						<iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+						<iframe src="static/pdfs/MotionEdit.pdf" width="100%" height="550">
 						</iframe>
 					</div>
 				</div>
