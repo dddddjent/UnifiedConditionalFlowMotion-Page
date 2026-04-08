@@ -449,7 +449,7 @@
 					<div class="hero-body">
 						<!-- TODO: Replace with your teaser video -->
 						<img
-							src="static/images/teaser_no_noise.png"
+							src="static/images/teaser_no_noise-1.png"
 							alt="Third research result visualization"
 							loading="lazy"
 						/>
@@ -515,46 +515,73 @@
 							<div class="item">
 								<!-- TODO: Replace with your research result images -->
 								<img
-									src="static/images/carousel1.jpg"
-									alt="First research result visualization"
+									src="static/images/model_arch_v2-1.png"
+									alt="Model architecture"
 									loading="lazy"
 								/>
 								<!-- TODO: Replace with description of this result -->
 								<h2 class="subtitle has-text-centered">
-									First image description.
+									Model Architecture. Input frame tokens are reshaped into
+									per-joint tokens for processing. Time and skeleton conditions
+									are injected via AdaLN, while text embeddings are integrated
+									through cross-attention.
 								</h2>
 							</div>
 							<div class="item">
 								<!-- Your image here -->
 								<img
-									src="static/images/carousel2.jpg"
-									alt="Second research result visualization"
+									src="static/images/flow-edit.png"
+									alt="Flow edit process"
 									loading="lazy"
 								/>
 								<h2 class="subtitle has-text-centered">
-									Second image description.
+									Applications of our unified inference scheme. Left: text-based
+									editing by changing the text condition. Right: retargeting by
+									changing only the skeleton condition. Both use the same
+									pre-trained model and an inversion-free update rule, where the
+									edit velocity is obtained by combining velocity predictions
+									under different conditions.
 								</h2>
 							</div>
 							<div class="item">
 								<!-- Your image here -->
 								<img
-									src="static/images/carousel3.jpg"
-									alt="Third research result visualization"
+									src="static/images/motion-gen_compress_vertical-1.png"
+									alt="Generation results"
 									loading="lazy"
 								/>
 								<h2 class="subtitle has-text-centered">
-									Third image description.
+									Qualitative comparison on text-to-motion generation. For
+									visualization, motions with little or no root translation are
+									manually time-shifted. Prompt words in red denote actions,
+									while words in green indicate motion modifiers.
 								</h2>
 							</div>
 							<div class="item">
 								<!-- Your image here -->
 								<img
-									src="static/images/carousel4.jpg"
-									alt="Fourth research result visualization"
+									src="static/images/motion-retarget_compress_vertical-1.png"
+									alt="Retargeting results"
 									loading="lazy"
 								/>
 								<h2 class="subtitle has-text-centered">
-									Fourth image description.
+									Qualitative retargeting comparison. We compare against SAN,
+									SAME, and R2ET. The proposed method better preserves
+									fine-grained local motion and adapts to varying skeleton
+									proportions.
+								</h2>
+							</div>
+							<div class="item">
+								<!-- Your image here -->
+								<img
+									src="static/images/motion-edit_compress_vertical-1.png"
+									alt="Retargeting results"
+									loading="lazy"
+								/>
+								<h2 class="subtitle has-text-centered">
+									Qualitative results on text-based motion editing. Edited
+									prompt words are highlighted in red and green. For
+									visualization, motions shifted.
 								</h2>
 							</div>
 						</div>
