@@ -346,7 +346,8 @@
 							<div class="column has-text-centered">
 								<!-- TODO: Replace with your paper title -->
 								<h1 class="title is-1 publication-title">
-									UniMotion: Motion Editing and Retargeting via Conditional Flow
+									A Unified Conditional Flow for Motion Generation, Editing, and
+									Intra-Structural Retargeting
 								</h1>
 								<div class="is-size-5 publication-authors">
 									<!-- TODO: Replace with your paper authors and their personal links -->
@@ -381,7 +382,7 @@
 										<!-- TODO: Update with your arXiv paper ID -->
 										<span class="link-block">
 											<a
-												href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf"
+												href="https://arxiv.org/pdf/2604.13427"
 												target="_blank"
 												class="external-link button is-normal is-rounded is-dark"
 											>
@@ -425,7 +426,7 @@
 										<!-- TODO: Update with your arXiv paper ID -->
 										<span class="link-block">
 											<a
-												href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+												href="https://arxiv.org/abs/2604.13427"
 												target="_blank"
 												class="external-link button is-normal is-rounded is-dark"
 											>
@@ -455,11 +456,14 @@
 						/>
 						<!-- TODO: Replace with your video description -->
 						<h2 class="subtitle has-text-centered">
-							UniMotion unifies motion generation, editing, and retargeting. A
-							single rectified-flow model conditioned on text and skeleton
-							enables (left) generation, (middle) zero-shot editing by changing
-							only the text condition, and (right) zero-shot retargeting by
-							changing only the skeleton condition.
+							<b
+								>One rectified-flow model unifies motion generation, editing,
+								and intra-structural retargeting.</b
+							>
+							Conditioned on text and skeleton, it enables (left) generation,
+							(middle) zero-shot editing by changing only the text condition,
+							and (right) zero-shot retargeting by changing only the skeleton
+							condition.
 						</h2>
 					</div>
 				</div>
@@ -475,17 +479,18 @@
 							<div class="content has-text-justified">
 								<!-- TODO: Replace with your paper abstract -->
 								<p>
-									Text-driven motion editing and skeletal retargeting are
-									traditionally handled by fragmented pipelines with
-									incompatible inputs and representations: editing relies on
-									specialized generative steering, while retargeting is deferred
-									to geometric post-processing. We present a unifying
+									Text-driven motion editing and intra-structural retargeting,
+									where source and target share topology but may differ in bone
+									lengths, are traditionally handled by fragmented pipelines
+									with incompatible inputs and representations: editing relies
+									on specialized generative steering, while retargeting is
+									deferred to geometric post-processing. We present a unifying
 									perspective where both tasks are cast as instances of
-									<b>conditional transport</b> within a single generative
-									framework. By leveraging recent advances in flow matching, we
-									demonstrate that editing and retargeting are fundamentally the
-									same generative task, distinguished only by which conditioning
-									signal—semantic or structural—is modulated during inference.
+									conditional transport within a single generative framework. By
+									leveraging recent advances in flow matching, we demonstrate
+									that editing and retargeting are fundamentally the same
+									generative task, distinguished only by which conditioning
+									signal, semantic or structural, is modulated during inference.
 									We implement this vision via a rectified-flow motion model
 									jointly conditioned on text prompts and target skeletal
 									structures. Our architecture extends a DiT-style transformer
@@ -495,9 +500,9 @@
 									text adherence with skeletal conformity. Experiments on
 									SnapMoGen and a multi-character Mixamo subset show that a
 									single trained model supports text-to-motion generation,
-									zero-shot editing, and zero-shot retargeting. This unified
-									approach simplifies deployment and improves structural
-									consistency compared to task-specific baselines.
+									zero-shot editing, and zero-shot intra-structural retargeting.
+									This unified approach simplifies deployment and improves
+									structural consistency compared to task-specific baselines.
 								</p>
 							</div>
 						</div>
