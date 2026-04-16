@@ -5,7 +5,8 @@
 	--secondary-color: #64748b;
 	--accent-color: #0ea5e9;
 	--text-primary: #1e293b;
-	--text-secondary: #64748b;
+	/* --text-secondary: #64748b; */
+	--text-secondary: #364356;
 	--text-light: #94a3b8;
 	--background-primary: #ffffff;
 	--background-secondary: #f8fafc;
@@ -317,7 +318,7 @@ body {
 }
 
 .results-carousel .subtitle {
-	font-size: 1rem !important;
+	font-size: 1.25rem !important;
 	color: var(--text-secondary);
 	margin-top: 1rem;
 	font-weight: 500;
@@ -365,7 +366,7 @@ body {
 
 /* Content Improvements */
 .content.has-text-justified {
-	font-size: 1.1rem;
+	font-size: 1.25rem;
 	line-height: 1.8;
 	color: var(--text-secondary);
 }
