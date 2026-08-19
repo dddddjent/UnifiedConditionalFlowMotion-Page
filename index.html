@@ -187,58 +187,66 @@
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
-				"@type": "ScholarlyArticle",
-				"headline": "PAPER_TITLE",
-				"description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+				"@type": ["Article", "ScholarlyArticle"],
+				"@id": "https://dddddjent.github.io/UnifiedConditionalFlowMotion-Page/#paper",
+				"headline": "A Unified Conditional Flow for Motion Generation, Editing, and Intra-Structural Retargeting",
+				"description": "A unified rectified-flow framework for text-to-motion generation, zero-shot motion editing, and zero-shot intra-structural motion retargeting.",
+				"abstract": "Text-driven motion editing and intra-structural retargeting, where source and target share topology but may differ in bone lengths, are traditionally handled by fragmented pipelines with incompatible inputs and representations: editing relies on specialized generative steering, while retargeting is deferred to geometric post-processing. We present a unifying perspective where both tasks are cast as instances of conditional transport within a single generative framework. By leveraging recent advances in flow matching, we demonstrate that editing and retargeting are fundamentally the same generative task, distinguished only by which conditioning signal, semantic or structural, is modulated during inference. We implement this vision via a rectified-flow motion model jointly conditioned on text prompts and target skeletal structures. Our architecture extends a DiT-style transformer with per-joint tokenization and explicit joint self-attention to strictly enforce kinematic dependencies, while a multi-condition classifier-free guidance strategy balances text adherence with skeletal conformity. Experiments on SnapMoGen and a multi-character Mixamo subset show that a single trained model supports text-to-motion generation, zero-shot editing, and zero-shot intra-structural retargeting. This unified approach simplifies deployment and improves structural consistency compared to task-specific baselines.",
+				"url": "https://dddddjent.github.io/UnifiedConditionalFlowMotion-Page/",
+				"sameAs": "https://arxiv.org/abs/2604.13427",
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": "https://dddddjent.github.io/UnifiedConditionalFlowMotion-Page/"
+				},
+				"image": "https://dddddjent.github.io/UnifiedConditionalFlowMotion-Page/static/images/teaser_no_noise-1.png",
+				"datePublished": "2026-04-15",
+				"inLanguage": "en",
+				"isAccessibleForFree": true,
+				"identifier": {
+					"@type": "PropertyValue",
+					"propertyID": "arXiv",
+					"value": "2604.13427"
+				},
+				"encoding": {
+					"@type": "MediaObject",
+					"contentUrl": "https://arxiv.org/pdf/2604.13427",
+					"encodingFormat": "application/pdf"
+				},
 				"author": [
 					{
 						"@type": "Person",
-						"name": "FIRST_AUTHOR_NAME",
+						"name": "Junlin Li",
 						"affiliation": {
 							"@type": "Organization",
-							"name": "INSTITUTION_NAME"
+							"name": "ByteDance"
 						}
 					},
 					{
 						"@type": "Person",
-						"name": "SECOND_AUTHOR_NAME",
-						"affiliation": {
-							"@type": "Organization",
-							"name": "INSTITUTION_NAME"
-						}
-					}
-				],
-				"datePublished": "2024-01-01",
-				"publisher": {
-					"@type": "Organization",
-					"name": "CONFERENCE_OR_JOURNAL_NAME"
-				},
-				"url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-				"image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-				"keywords": [
-					"KEYWORD1",
-					"KEYWORD2",
-					"KEYWORD3",
-					"machine learning",
-					"computer vision"
-				],
-				"abstract": "FULL_ABSTRACT_TEXT_HERE",
-				"citation": "BIBTEX_CITATION_HERE",
-				"isAccessibleForFree": true,
-				"license": "https://creativecommons.org/licenses/by/4.0/",
-				"mainEntity": {
-					"@type": "WebPage",
-					"@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-				},
-				"about": [
-					{
-						"@type": "Thing",
-						"name": "RESEARCH_AREA_1"
+						"name": "Xinhao Song"
 					},
 					{
-						"@type": "Thing",
-						"name": "RESEARCH_AREA_2"
+						"@type": "Person",
+						"name": "Siqi Wang"
+					},
+					{
+						"@type": "Person",
+						"name": "Haibin Huang"
+					},
+					{
+						"@type": "Person",
+						"name": "Yili Zhao"
 					}
+				],
+				"keywords": [
+					"motion generation",
+					"motion editing",
+					"motion retargeting",
+					"conditional flow",
+					"flow matching",
+					"character animation",
+					"machine learning",
+					"computer graphics"
 				]
 			}
 		</script>
@@ -249,12 +257,7 @@
 				"@context": "https://schema.org",
 				"@type": "Organization",
 				"name": "TikTok Inc.",
-				<!-- "url": "https://YOUR_INSTITUTION_WEBSITE.com", -->
-				"logo": "https://dddddjent.github.io/UnifiedConditionalFlowMotion-Page/static/images/favicon1.ico",
-				"sameAs": [
-					<!-- "https://twitter.com/YOUR_TWITTER_HANDLE", -->
-					<!-- "https://github.com/YOUR_GITHUB_USERNAME" -->
-				]
+				"logo": "https://dddddjent.github.io/UnifiedConditionalFlowMotion-Page/static/images/favicon1.ico"
 			}
 		</script>
 	</head>
