@@ -365,6 +365,16 @@ body {
 	padding-bottom: 1rem;
 }
 
+.conference {
+	font-family: 'Inter', sans-serif !important;
+	font-weight: 500 !important;
+    font-style: italic;
+	color: var(--text-secondary);
+	margin-bottom: 2rem !important;
+	position: relative;
+	padding-bottom: 1rem;
+}
+
 .title.is-3::after {
 	content: '';
 	position: absolute;
